@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+.nav {
+    height: 10vh;
+    background-image: linear-gradient(to right, #397DD6, #02D0FE);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: rgb(234, 249, 255);
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    img {
+        height: 2.5rem;
+        margin-right: 1rem;
+    }
+}
+
+.section-1 {
+    height: 90vh;
+    background-color: #8bb9ffcf;
+    display: flex;
+    align-items: center;
+}
+
+.apps {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    /* border: black 2px solid; */
+    padding: 0.5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(1, 1fr); */
+    overflow-y: scroll;
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(255, 255, 255, 0.5);
+
+    /* SCROLLBAR */
+
+    /* For Firefox */
+    scrollbar-width: none;
+    /* For Internet Explorer and Edge */
+    -ms-overflow-style: none;
+    /* Ensure the element can still scroll if content overflows */
+}
+
+
+
+.app-card {
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 37, 118, 0.504);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .app-icon {
+        border-radius: 1rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .app-info {
+        margin: 0.5rem;
+
+        h3 {
+            color: white;
+            margin-bottom: 0.5rem
+        }
+
+        p {
+            color: rgb(207, 207, 207);
+            margin-bottom: 0.5rem
+        }
+
+        a {
+            color: rgb(148, 181, 181);
+        }
+    }
+
+    .install-btn {
+        background-color: black;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: none;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .apps {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .app-info {
+        h3 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.5rem;
+        }
+
+        a {
+            font-size: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .app-info {
+        h3 {
+            font-size: 0.8rem;
+        }
+    }
+}
